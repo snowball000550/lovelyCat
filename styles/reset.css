@@ -1,0 +1,10 @@
+/*reset.css*/
+body{margin: 0;}
+a{text-decoration: none;}
+li{list-style: none;}
+.body{width: 100%;height: 100vh;background: #ffddce;display: flex;}
+@font-face{font-family: 'HYLeMiaoTiW';src: url('./HYLeMiaoTiJ Regular.TTF');}
+.orange-btn{width: 200px;height: 60px;background: #fc8d59;color: #ffffff;border-radius: 5px;text-align: center;line-height: 60px;margin: 0 30px;font-size: 20px;}
+.orange-btn:hover{background: #f9a077;color: #fff;}
+.orange{color: #fc8d59;}
+.HYLeMiaoTiW-font{font-family: HYLeMiaoTiW;font-size: 40px;text-align: center;}
