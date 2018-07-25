@@ -1,0 +1,124 @@
+<!-- resetpwd.html -->
+<!-- resetpwd.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>忘记密码</title>
+	<link rel="stylesheet" href="styles/reset.css">
+	<style type="text/css">
+		input{
+			/*width: 400px;*/
+			border: 0px;
+			outline:none;
+			color: #999999;
+			font-size: 14px;
+			flex: 1;
+		}
+		.body{
+			background: #ffffff;
+		}
+		.resetpwd-center{
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 400px;
+		}
+		.resetpwd-title{
+			text-align: center;
+			font-size: 56px;
+		}
+		.resetpwd-denglu{
+			font-size: 20px;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 50px;
+		}
+		.resetpwd-input{
+			display: flex;
+			flex-direction: row;
+			border-bottom: 2px solid #ccc;
+			padding: 11px 0;
+			margin: 20px 0;
+		}
+		.input-text{
+			white-space: nowrap;
+			font-size: 22px;
+			color: #333333;
+			/*flex: 1;*/
+		}
+		.ligin-input-username{
+			flex: 1;
+		}
+		.ligin-input-password{
+			flex: 1;
+		}
+		.resetpwd-btn{
+			width: 400px;
+			margin: 30px 0;
+		}
+		.resetpwd-line{
+			text-decoration: underline;
+		}
+		.forget{
+			text-align: center;
+		}
+		.signin{
+			/*margin: auto;*/
+			display: flex;
+			flex-direction: row;
+			margin: 10px auto;
+		}
+		.resetpwd-btn:hover{
+			background: #f9a077;
+			color: #fff;
+		}
+		.resetpwd-input-username{
+			margin-left: 16px;
+		}
+		.resetpwd-input-password{
+			margin-left: 16px;
+		}
+		.resetpwd-privacy{
+			margin: 0 auto;
+		}
+		.verify-code{
+			width: 80px;
+			height: 30px;
+			font-size: 12px;
+			line-height: 30px;
+			margin: 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="body">
+		<div class="resetpwd-center">
+			<div class="resetpwd-title HYLeMiaoTiW-font">欢迎加入猫公益</div>
+			<div class="resetpwd-denglu orange">修改密码</div>
+			<div class="resetpwd-input">
+				<div class="input-text">新密码:</div>
+				<input class="resetpwd-input-username" type="text" name="username" placeholder="&nbsp&nbsp&nbsp&nbsp请设置新密码">
+			</div>
+			<div class="resetpwd-input">
+				<div class="input-text">新密码:</div>
+				<input class="resetpwd-input-password" onchange="pwdCover(this)" type="password" name="pwd" placeholder="&nbsp&nbsp&nbsp&nbsp请再次输入新密码">
+			</div>
+			<div class="resetpwd-input">
+				<div class="input-text">邮箱:</div>
+				<input class="resetpwd-input-password" onchange="pwdCover(this)" type="password" name="pwd" placeholder="&nbsp&nbsp&nbsp&nbsp请输入您注册时使用的手机/邮箱">
+			</div>
+			<div class="resetpwd-input">
+				<div class="input-text">验证码:</div>
+				<input class="resetpwd-input-password" onchange="pwdCover(this)" type="password" name="pwd" placeholder="&nbsp&nbsp&nbsp&nbsp请输入正确的验证码">
+				<a href="javascript:;" class="verify-code orange-btn">获取验证码</a>
+			</div>
+			<a href="#" class="resetpwd-btn orange-btn">确认修改</a>
+			<div class="signin">
+				<div class="noname">改变主意，直接</div>
+				<a href="file:///Users/xueqing.ma/Public/cat/lovelyCat/login.html" class="singin-btn orange">登录</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

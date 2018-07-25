@@ -1,73 +1,130 @@
-<!-- homepage.html -->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>首页</title>
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
 	<style type="text/css">
-		.home-center{
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			/*width: 700px;*/
+		.top{
+			width: 100%;
+			height: 190px;
+			background: #fcd8d8;
+			/*display: flex;*/
+			
 		}
-		.home-center-logo{
-			margin: 10px 0;
-			display: flex;
-		}
-		.logoimg{
+		.topbox{
+			width: 80%;
 			margin: 0 auto;
 		}
-		.home-center-title{
-			margin: 10px 0;
-		}
-		.home-center-famous{
-			margin: 20px 0;
-			width: 560px;
+		.toolbar{
 			display: flex;
-			justify-content: space-between;
-			flex-direction: column;
-		}
-		.home-center-famous-text{
-			font-size: 20px;
 			align-items: center;
-			justify-content: center;
-			margin: 10px 0;
-			white-space: nowrap;
-			text-align: center;
-		}
-		.home-center-famous-author{
-			font-size: 24px;
-			align-items: flex-end;
-			text-align: right;
-			margin: 10px 0;
-			white-space: nowrap;
-		}
-		.home-center-btn{
-			display: flex;
 			justify-content: space-between;
-			/*width: 600px;*/
+			height: 50px;
+			align-items: center;
+		}
+		.toolbar-logo{
+			display: flex;
+		}
+		.toolbar-logo-img{
+			align-items: center;
+			color: #fc8d59;
+
+		}
+		.toolbar-logo-text{
+			/*justify-content: center*/
+			align-items: center;
+			color: #fc8d59;
+			position: relative;
+			line-height: 25px;
+		}
+		.top-text1{
+			font-size: 18px;
+		}
+		.top-text2{
+			font-size: 12px;
+		}
+		.toolbar-section-ul{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			margin-left: 6px;
+		}
+		.toolbar-btn{
+			/*background: #fc8d59;*/
+			height: 50px;
+			width: 80px;
+			text-align: center;
+			line-height: 50px;
+			color: #878787;
+			font-size: 15px;
+		}
+		.on{
+			background: #fc8d59;
+			color: #fff;
+		}
+		.login-btn{
+			display: flex;
+		}
+		.orange-btn-small{
+			width: 50px;
+			height: 30px;
+			font-size: 12px;
+			background: #fc8d59;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 30px;
+			margin: 0px 3px;
+			color: #fff;
 		}
 	</style>
 </head>
 <body>
 	<div class="body">
-		<!-- <div class="slice"><img src="slices/1 slogn.png" alt=""></div> -->
-		<div class="home-center">
-			<div class="home-center-logo">
-				<img class="logoimg" src="images/logo.png" alt="logo">
-			</div>
-			<div class="home-center-title HYLeMiaoTiW-font">关于猫的公益</div>
-			<div class="home-center-famous">
-				<div class="home-center-famous-text">如果你无法简洁的表达你的想法，那只说明你还不够了解它。</div>
-				<div class="home-center-famous-author">——阿尔伯特·爱因斯坦</div>
-			</div>
-			<div class="home-center-btn">
-				<a href="file:///Users/xueqing.ma/Desktop/cat/login.html" class="orange-btn">加入我们</a>
-				<a href="file:///Users/xueqing.ma/Desktop/cat/login.html" class="orange-btn">逛逛社区</a>
+		<div class="top">
+			<div class="topbox">
+				<div class="toolbar">
+					<div class="toolbar-logo">
+						<img class="toolbar-logo-img" src="images/icon.png" alt="cat">
+						<div class="toolbar-logo-text">
+							<div class="top-text1">公益猫</div>
+							<div class="top-text2">每一只猫猫都值得被爱，为ta寻找港湾</div>
+						</div>
+					
+					<div class="toolbar-section">
+						<ul class="toolbar-section-ul">
+							<li class="toolbar-btn on" onmouseover='sectionSelect(this)'><a href="#"></a>首页</li>
+							<li class="toolbar-btn"><a href="#"></a>社区</li>
+							<li class="toolbar-btn"><a href="#"></a>日记</li>
+							<li class="toolbar-btn"><a href="#"></a>发布</li>
+							<li class="toolbar-btn"><a href="#"></a>我的</li>
+						</ul>
+					</div>
+				</div>
+					<div class="login-btn">
+						<a href="file:///Users/xueqing.ma/Public/cat/lovelyCat/login.html" class="orange-btn-small">登录</a>
+						<a class="orange-btn-small" href="file:///Users/xueqing.ma/Public/cat/lovelyCat/join.html">注册</a>
+					</div>
+				</div>
+				<div class="logobox"></div>
 			</div>
 		</div>
+		<div class="center">
+			<div class="center-title"></div>
+			<div class="select"></div>
+			<div class="cat-content"></div>
+		</div>
+		<div class="foot">
+			<div class="foot-logo"></div>
+			<div class="foot-contact"></div>
+			<div class="wechat"></div>
+		</div>
 	</div>
+
 </body>
 </html>
+<script type="text/javascript">
+	function sectionSelect(a){
+		a.style.background="#fc8d59";
+		a.style.color="#fff";
+	}
+</script>
