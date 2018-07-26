@@ -91,18 +91,18 @@
 						</div>
 					
 					<div class="toolbar-section">
-						<ul class="toolbar-section-ul">
-							<li class="toolbar-btn on" onmouseover='sectionSelect(this)'><a href="#"></a>首页</li>
-							<li class="toolbar-btn"><a href="#"></a>社区</li>
-							<li class="toolbar-btn"><a href="#"></a>日记</li>
-							<li class="toolbar-btn"><a href="#"></a>发布</li>
-							<li class="toolbar-btn"><a href="#"></a>我的</li>
-						</ul>
+						<div class="toolbar-section-ul">
+							<a class="toolbar-btn on" href="#">首页</a>
+							<a class="toolbar-btn" href="#">社区</a>
+							<a class="toolbar-btn" href="#">日记</a>
+							<a class="toolbar-btn" href="#">发布</a>
+							<a class="toolbar-btn" href="#">我的</a>
+						</div>
 					</div>
 				</div>
 					<div class="login-btn">
-						<a href="file:///Users/xueqing.ma/Public/cat/lovelyCat/login.html" class="orange-btn-small">登录</a>
-						<a class="orange-btn-small" href="file:///Users/xueqing.ma/Public/cat/lovelyCat/join.html">注册</a>
+						<a href="login.html" class="orange-btn-small">登录</a>
+						<a class="orange-btn-small" href="join.html">注册</a>
 					</div>
 				</div>
 				<div class="logobox"></div>
@@ -123,8 +123,14 @@
 </body>
 </html>
 <script type="text/javascript">
-	function sectionSelect(a){
-		a.style.background="#fc8d59";
-		a.style.color="#fff";
+	var toolbtn=document.getElementsByClassName("toolbar-btn");
+	for(i=1;i<toolbtn.length;i++){
+		toolbtn[i].onmouseover=function(){
+			console.log("111111111111");
+			this.classList.add("on");
+		}
+		toolbtn[i].onmouseout=function(){
+			this.classList.remove("on");
+		}
 	}
 </script>
