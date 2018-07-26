@@ -325,7 +325,7 @@
 	var catContent = document.getElementById("cat-content-ul");
 	
 	
-		for(i=0;i<13;i++){
+		for(i=0;i<12;i++){
 			var catList=document.createElement("li");
 			catList.classList.add("cat-detail-li");
 
@@ -356,8 +356,8 @@
 			catInfoLeft.appendChild(head);
 
 			var catName=document.createElement("div");
-			catName.classList.add("cat-name");
-			catName.innerTEXT='昵称';
+			catName.classList.add("name");
+			catName.innerText='昵称';
 			catInfoLeft.appendChild(catName);
 			
 
@@ -365,7 +365,18 @@
 			headImg.src='images/head.png';
 			head.appendChild(headImg);
 
+			var catInfoRight=document.createElement("div");
+			catInfoRight.classList.add("cat-info-right");
+			catInfo.appendChild(catInfoRight);
 
+			var likeImg=document.createElement("img");
+			likeImg.classList.add("like");
+			likeImg.src='images/like-empty.png';
+			catInfoRight.appendChild(likeImg);
+
+			var commentImg=document.createElement("img");
+			commentImg.src='images/comment.png';
+			catInfoRight.appendChild(commentImg);
 
 			catList.appendChild(catlink);
 			catContent.appendChild(catList);
