@@ -1,21 +1,21 @@
+<!-- topiclist.html -->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>首页</title>
+	<title>社区</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/reset.css">
-
 	<style type="text/css">
 		input{ /*输入框*/
-			border: 1px solid #91bfdb;
-			border-radius: 5px;
-		}
+				border: 1px solid #91bfdb;
+				border-radius: 5px;
+			}
 		 input:focus { /*点击输入框*/
             outline: none;
             border-color: #9ecaed;
             box-shadow: 0 0 10px #9ecaed;
         }
-        .body-long{
+		.body-long{
         	width: 100%;
         	display: flex;
         	flex-direction: column;
@@ -23,7 +23,7 @@
 		.top{
 			width: 100%;
 			height: 360px;
-			background: #fcd8d8;
+			/*background: #fcd8d8;*/
 		}
 		.topbox{
 			width: 80%;
@@ -107,12 +107,6 @@
 			justify-content: center;
 			border-bottom: 1px solid #fc8d59;
 		}
-		.line{
-			width: 100px;
-			height: 1.4px;
-			background: #fc8d59;
-			margin: 0 20px;
-		}
 		.select{
 			margin-left: 10px;
 		}
@@ -175,40 +169,6 @@
 			display: block;
 			padding: 20px 18px;
 		}
-		.cat-link{
-			width: 100%;
-			height: 100%;
-		}
-		.cat-img{
-			width: 100%;
-			border-radius: 5px;
-		}
-		.star-img{
-			position: absolute;
-			margin-left: -36px;
-    		margin-top: 6px;
-		}
-		.cat-info{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.cat-info-left{
-			display: flex;
-			align-items: center;
-			height: 30px;
-		}
-		.cat-info-right{
-			display: flex;
-			align-items: center;
-			height: 30px;
-		}
-		.name{
-			margin: 0 6px;
-		}
-		.like{
-			margin: 0 6px;
-		}
 		.foot{
 			width: 100%;
 			height: 200px;
@@ -256,8 +216,8 @@
 					
 					<div class="toolbar-section">
 						<div class="toolbar-section-ul">
-							<a class="toolbar-btn on" href="#">首页</a>
-							<a class="toolbar-btn" href="#">社区</a>
+							<a class="toolbar-btn" href="#">首页</a>
+							<a class="toolbar-btn on" href="#">社区</a>
 							<a class="toolbar-btn" href="#">日记</a>
 							<a class="toolbar-btn" href="#">发布</a>
 							<a class="toolbar-btn" href="#">我的</a>
@@ -273,25 +233,13 @@
 			</div>
 		</div>
 		<div class="center">
-			<div class="center-title">
-				<div class="line"></div>
-				<span>寻找喵星人</span>
-				<div class="line"></div>
-			</div>
-			<div class="select">
-				<script type="text/javascript" src="select.js"></script><!-- 通用选择栏 -->
-			</div>
-			<div class="cat-content">
-				<ul class="cat-content-ul" id="cat-content-ul">
-
-				</ul>
-			</div>
+			<div class="center-title"></div>
+			<div class="select"><script type="text/javascript" src="select.js"></script><!-- 通用选择栏 --></div>
 		</div>
 		<div class="foot">
-		<script type="text/javascript" src="foot.js"></script><!-- 通用底部 -->
+			<script type="text/javascript" src="foot.js"></script><!-- 通用底部 -->
 		</div>
 	</div>
-
 </body>
 </html>
 <script type="text/javascript">
@@ -303,66 +251,6 @@
 		toolbtn[i].onmouseout=function(){
 			this.classList.remove("on");
 		}
-	}
-
-	var catContent = document.getElementById("cat-content-ul");
-	
-	
-		for(i=0;i<12;i++){
-			var catList=document.createElement("li");
-			catList.classList.add("cat-detail-li");
-
-			var catlink=document.createElement("a");
-			catlink.setAttribute('href','#');
-			catlink.classList.add("cat-link");
-
-			var catImg=document.createElement("img");
-			catImg.src='images/354863575.jpg';
-			catImg.classList.add("cat-img");
-			catlink.appendChild(catImg);
-
-			var starImg=document.createElement("img");
-			starImg.src='images/star.png';
-			starImg.classList.add("star-img");
-			catlink.appendChild(starImg);
-
-			var catInfo=document.createElement("div");
-			catInfo.classList.add("cat-info");
-			catlink.appendChild(catInfo);
-
-			var catInfoLeft=document.createElement("div");
-			catInfoLeft.classList.add("cat-info-left");
-			catInfo.appendChild(catInfoLeft);
-
-			var head=document.createElement("div");
-			head.classList.add("head");
-			catInfoLeft.appendChild(head);
-
-			var catName=document.createElement("div");
-			catName.classList.add("name");
-			catName.innerText='昵称';
-			catInfoLeft.appendChild(catName);
-			
-
-			var headImg=document.createElement("img");
-			headImg.src='images/head.png';
-			head.appendChild(headImg);
-
-			var catInfoRight=document.createElement("div");
-			catInfoRight.classList.add("cat-info-right");
-			catInfo.appendChild(catInfoRight);
-
-			var likeImg=document.createElement("img");
-			likeImg.classList.add("like");
-			likeImg.src='images/like-empty.png';
-			catInfoRight.appendChild(likeImg);
-
-			var commentImg=document.createElement("img");
-			commentImg.src='images/comment.png';
-			catInfoRight.appendChild(commentImg);
-
-			catList.appendChild(catlink);
-			catContent.appendChild(catList);	
 	}
 
 	var checkboxNew=document.getElementsByClassName("checkbox-new");
