@@ -226,6 +226,12 @@
 			display: flex;
 			align-items: center;
 			margin-left: 6px;
+			background: url(images/check.png) no-repeat;
+			position: relative;
+			padding-left: 24px;
+		}
+		.checked{
+			background: url(images/checked.png) no-repeat;
 		}
 		.foot-contact{
 			display: flex;
@@ -366,14 +372,23 @@
 	}
 
 	var checkboxNew=document.getElementsByClassName("checkbox-new");
+	var checkflag = true;
 	for(i=0;i<checkboxNew.length;i++){
-		var firstChild=checkboxNew[i].firstElementChild;
-		checkboxNew[i].onclick=function(){
-			if(firstChild.getAttribute('src',2)=='images/check.png'){
-				firstChild.src='images/checked.png';
-			}else{
-				firstChild.src='images/check.png';
-			}
-	}
+	  	checkboxNew[i].onclick=function(){
+	  		if(checkflag){
+	  			this.classList.add('checked');
+	  		}else{
+	  			this.classList.remove('checked');
+	  		}
+	  		checkflag=!checkflag;
+	  		
+	  	}
+	// 		if(firstChild[i].getAttribute('src',2)=='images/check.png'){
+	// 			firstChild.src='images/checked.png';
+	// 		}else{
+	// 			firstChild.src='images/check.png';
+	// 		}
+	// }
+
 }
 </script>
