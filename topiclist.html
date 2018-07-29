@@ -15,31 +15,31 @@
             border-color: #9ecaed;
             box-shadow: 0 0 10px #9ecaed;
         }
-		.body-long{
+		.body-long{ /*网页body*/
         	width: 100%;
         	display: flex;
         	flex-direction: column;
         }
-		.top{
+		.top{ /*顶边栏*/
 			width: 100%;
 			height: 360px;
 			/*background: #fcd8d8;*/
 		}
-		.topbox{
+		.topbox{/*顶边内容*/
 			width: 80%;
 			margin: 0 auto;
 		}
-		.toolbar{
+		.toolbar{ /*顶边按钮*/
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			height: 50px;
 			align-items: center;
 		}
-		.toolbar-logo{
+		.toolbar-logo{ /*顶边logo位置*/
 			display: flex;
 		}
-		.toolbar-logo-img{
+		.toolbar-logo-img{ 
 			align-items: center;
 			color: #fc8d59;
 
@@ -76,7 +76,7 @@
 			background: #fc8d59;
 			color: #fff;
 		}
-		.login-btn{
+		.login-btn{ /*登录按钮区域*/
 			display: flex;
 		}
 		.orange-btn-small{
@@ -90,14 +90,18 @@
 			margin: 0px 3px;
 			color: #fff;
 		}
-		.center{
+		.logobox-right{
+			position: absolute;
+			right: 70px;
+		}
+		.center{ /*中部内容区域*/
 			width: 80%;
 			margin: 10px auto;
 			display: flex;
 			
 			flex-direction: column;
 		}
-		.center-title{
+		.center-title{ /*中部标题*/
 			width: 100%;
 			margin: 0 auto;
 			margin-bottom:10px;
@@ -107,7 +111,7 @@
 			justify-content: center;
 			border-bottom: 1px solid #fc8d59;
 		}
-		.select{
+		.select{ /*筛选栏*/
 			margin-left: 10px;
 		}
 		.select-up{
@@ -163,13 +167,83 @@
 			margin-left: 36px;
 			display: flex;
 		}
-		.cat-detail-li{
-			width: 21%;
-			float: left;
-			display: block;
-			padding: 20px 18px;
+		.topic-list-content{ /*单条信息内容*/
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
 		}
-		.foot{
+		.topic-item{
+			width: 94%;
+			border: 1px solid #d7d7d7;
+			border-radius: 5px;
+			padding: 6px;
+			margin: 3px auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.topic-up{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.topic-title{
+			display: flex;
+			align-items: center;
+		}
+		.topic-time{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			color: #928787;
+			font-size: 15px;
+		}
+		.topic-center{
+			display: flex;
+			justify-content: space-around;
+		}
+		.topic-center-left{
+			display: flex;
+			/*justify-content: space-between;*/
+			flex-direction: column;
+			justify-content: flex-end;
+
+		}
+		.topic-open{
+			text-align: right;
+			color: #fc8d59;
+		}
+		.topic-item-detail{
+			/*width: 60%;*/
+			height: 100px;
+			white-space: normal;
+			margin: 6px 5px;
+			flex:1;
+			justify-content: flex-end;
+			color: #928787;
+			font-size: 15px;
+		}
+		.right-img{
+			width: 200px;
+		}
+		.topic-down{
+			align-self: flex-end;
+			display: flex;
+		}
+		.btn-icon{
+			display: flex;
+			align-items: center;
+			margin: 2px 20px;
+			color: #928787;
+			font-size: 15px;
+		}
+		.center-wait{ /*中部等待文字*/
+			margin: 16px auto;
+			text-align: center;
+			font-size: 18px;
+			color: #fc8d59;
+		}
+		.foot{ /*底部内容*/
 			width: 100%;
 			height: 200px;
 			background: #fc8d59;
@@ -182,15 +256,23 @@
 			justify-content: space-around;
 			margin: auto;
 		}
-		.checkbox-new{
+		.checkbox-new{ /*选择框样式*/
 			display: flex;
 			align-items: center;
 			margin-left: 6px;
+			background: url(images/check.png) no-repeat;
+			position: relative;
+			padding-left: 24px;
 		}
-		.foot-contact{
+		.checked{
+			background: url(images/checked.png) no-repeat;
+		}
+		.foot-contact{/*选择框选中样式*/
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-start;
+			justify-content: center;
+			/*align-items: center;*/
+			/*line-height: 26px;*/
 		}
 		.line2{
 			height: 120px;
@@ -198,7 +280,9 @@
 			background: #fff;
 		}
 		.small-img{
-			width: 26px;
+			width: 22px;
+			padding: 0 6px;
+			margin: auto;
 		}
 	</style>
 </head>
@@ -224,17 +308,125 @@
 						</div>
 					</div>
 				</div>
-					<div class="login-btn">
-						<a href="login.html" class="orange-btn-small">登录</a>
-						<a class="orange-btn-small" href="join.html">注册</a>
+				<div class="login-btn">
+					<a href="login.html" class="orange-btn-small">登录</a>
+					<a class="orange-btn-small" href="join.html">注册</a>
+				</div>
+			</div>
+				<div class="logobox">
+					<div class="logobox-left"></div>
+					<div class="logobox-right">
+						<img src="images/cats.png" alt="">
 					</div>
 				</div>
-				<div class="logobox"></div>
 			</div>
 		</div>
 		<div class="center">
 			<div class="center-title"></div>
 			<div class="select"><script type="text/javascript" src="select.js"></script><!-- 通用选择栏 --></div>
+			<div class="topic-list-content" id="topic-list-content">
+				<div class="topic-item">
+					<div class="topic-up">
+						<div class="topic-title">
+								<img src="images/paw.png" alt="">
+								<span>标题：</span>
+								<div class="topic-item-title">我和猫猫的故事</div>
+						</div>
+						<div class="topic-time" id="send-time">2010-01-01 12:30</div>
+					</div>
+					<div class="topic-center">
+						<div class="topic-center-left">
+							<div class="topic-item-detail">喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵</div>
+							<div class="topic-open">查看全文></div>
+						</div>
+							<div class="topic-center-right">
+									<img class="right-img" src="images/391773256.jpg" alt="">
+							</div>
+						</div>
+					<div class="topic-down">
+						<div class="btn-icon">
+							<img src="images/shoucang.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/comment.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/like-empty.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+					</div>
+				</div>
+				<div class="topic-item">
+					<div class="topic-up">
+						<div class="topic-title">
+								<img src="images/paw.png" alt="">
+								<span>标题：</span>
+								<div class="topic-item-title">我和猫猫的故事</div>
+						</div>
+						<div class="topic-time" id="send-time">2010-01-01 12:30</div>
+					</div>
+					<div class="topic-center">
+						<div class="topic-center-left">
+							<div class="topic-item-detail">喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵</div>
+							<div class="topic-open">查看全文></div>
+						</div>
+							<div class="topic-center-right">
+									<img class="right-img" src="images/391773256.jpg" alt="">
+							</div>
+						</div>
+					<div class="topic-down">
+						<div class="btn-icon">
+							<img src="images/shoucang.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/comment.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/like-empty.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+					</div>
+				</div>
+				<div class="topic-item">
+					<div class="topic-up">
+						<div class="topic-title">
+								<img src="images/paw.png" alt="">
+								<span>标题：</span>
+								<div class="topic-item-title">我和猫猫的故事</div>
+						</div>
+						<div class="topic-time" id="send-time">2010-01-01 12:30</div>
+					</div>
+					<div class="topic-center">
+						<div class="topic-center-left">
+							<div class="topic-item-detail">喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵</div>
+							<div class="topic-open">查看全文></div>
+						</div>
+							<div class="topic-center-right">
+									<img class="right-img" src="images/391773256.jpg" alt="">
+							</div>
+						</div>
+					<div class="topic-down">
+						<div class="btn-icon">
+							<img src="images/shoucang.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/comment.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+						<div class="btn-icon">
+							<img src="images/like-empty.png" alt="">
+							<span class="number" id="like-num">999</span>
+						</div>
+					</div>
+				</div>
+			<div class="center-wait">
+				<span>waiting...</span>
+			</div>
 		</div>
 		<div class="foot">
 			<script type="text/javascript" src="foot.js"></script><!-- 通用底部 -->
@@ -244,7 +436,8 @@
 </html>
 <script type="text/javascript">
 	var toolbtn=document.getElementsByClassName("toolbar-btn");
-	for(i=1;i<toolbtn.length;i++){
+	for(i=0;i<toolbtn.length;i++){
+		if(i==1){continue;}else{
 		toolbtn[i].onmouseover=function(){
 			this.classList.add("on");
 		}
@@ -252,16 +445,20 @@
 			this.classList.remove("on");
 		}
 	}
+	}
+	
 
 	var checkboxNew=document.getElementsByClassName("checkbox-new");
+	var checkflag = true;
 	for(i=0;i<checkboxNew.length;i++){
-		var firstChild=checkboxNew[i].firstElementChild;
-		checkboxNew[i].onclick=function(){
-			if(firstChild.getAttribute('src',2)=='images/check.png'){
-				firstChild.src='images/checked.png';
-			}else{
-				firstChild.src='images/check.png';
-			}
-	}
-}
+	  	checkboxNew[i].onclick=function(){
+	  		if(checkflag){
+	  			this.classList.add('checked');
+	  		}else{
+	  			this.classList.remove('checked');
+	  		}
+	  		checkflag=!checkflag;
+	  		
+	  	}
+	  }
 </script>
