@@ -6,10 +6,24 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles/reset.css">
 	<style type="text/css">
-		.body-long{
-        	width: 100%;
-        	display: flex;
-        	flex-direction: column;
+		input{ /*输入框*/
+				border: 1px solid #91bfdb;
+				border-radius: 5px;
+				width: 210px;
+				height: 30px;
+			}
+		 input:focus { /*点击输入框*/
+            outline: none;
+            border-color: #9ecaed;
+            box-shadow: 0 0 10px #9ecaed;
+        }
+        input[type=radio]{
+        	width: auto;
+        	height: auto;
+        }
+        input[type=submit]{
+        	width: auto;
+        	height: auto;
         }
 		.top{
 			width: 100%;
@@ -99,6 +113,41 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
+			margin: 10px 80px;
+		}
+		.photo{
+			display: flex;
+			align-items: flex-start;
+			margin-top: 10px;
+		}
+		.upload-photo{
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			margin-top: 20px;
+			margin-left: 6px;
+		}
+		.gray-font-small{
+			color: #878787;
+			font-size: 14px;
+		}
+		.name{
+			margin-top: 20px;
+		}
+		.sex{
+			margin-top: 20px;
+		}
+		.birth{
+			margin-top: 20px;
+		}
+		.phone{
+			margin-top: 20px;
+		}
+		.addres{
+			margin-top: 20px;
+		}
+		.commit{
+			margin-top: 20px;
 		}
 		.set-text{
 			height: 30px;
@@ -123,6 +172,8 @@
 			height: 200px;
 			background: #fc8d59;
 			display: flex;
+			position: absolute;
+			bottom: 0;
 		}
 		.footbox{
 			display: flex;
@@ -159,7 +210,7 @@
 	</style>
 </head>
 <body>
-	<div class="body-long">
+	<div class="body">
 		<div class="top">
 			<div class="topbox">
 				<div class="toolbar">
@@ -197,13 +248,40 @@
 				</div>
 			<div class="center-right">
 				<div class="id-text">个人资料</div>
-				<div class="photo"></div>
-				<div class="name"></div>
-				<div class="sex"></div>
-				<div class="birth"></div>
-				<div class="phone"></div>
-				<div class="addres"></div>
-				<div class="commit"></div>
+				<div class="photo">
+					<img src="images/LOGO-big.png" alt="head" style="width: 100px;">
+					<div class="upload-photo">
+						<input type="submit" value="浏览">
+						<span class="gray-font-small">请选择jpg\gif格式，</span>
+					</div>
+				</div>
+				<div class="name gray-font-small">
+					<span style="color: #aaa">*</span>
+					昵称:
+					<input type="text"  name="name" placeholder="请输入昵称">
+				</div>
+				<div class="sex gray-font-small">
+					<span style="color: #aaa">*</span>
+					性别:
+					<input type="radio" id="s1" value="0" name="sex">男</input>
+					<input type="radio" id="s2" value="1" name="sex">女</input>
+				</div>
+				<div class="birth gray-font-small">
+					<span style="color: #aaa">*</span>
+					生日:
+					<input type="date" name="birth-year">
+				</div>
+				<div class="phone gray-font-small">
+					<span style="color: #aaa">*</span>
+					手机号:
+					<input type="text"  name="phone" placeholder="请输入手机号"></div>
+				<div class="addres gray-font-small">
+					<span style="color: #aaa">*</span>
+					昵称:
+					<input type="text"  name="name" placeholder="请输入你所在的地址"></div>
+				<a href="javascript:;" class="commit">
+					<div class="orange-btn-small">提交</div>
+				</a>
 			</div>
 		</div>
 		<div class="foot">
