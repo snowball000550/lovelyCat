@@ -1,0 +1,271 @@
+<!-- diarydetail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>日记详情</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/reset.css">
+	<style type="text/css">
+		.body-long{ /*网页body*/
+        	width: 100%;
+        	display: flex;
+        	flex-direction: column;
+        }
+		.top{ /*顶边栏*/
+			width: 100%;
+			height: 50px;
+			/*background: #fcd8d8;*/
+		}
+		.topbox{/*顶边内容*/
+			width: 80%;
+			margin: 0 auto;
+		}
+		.toolbar{ /*顶边按钮*/
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+			align-items: center;
+		}
+		.toolbar-logo{ /*顶边logo位置*/
+			display: flex;
+		}
+		.toolbar-logo-img{ 
+			align-items: center;
+			color: #fc8d59;
+
+		}
+		.toolbar-logo-text{
+			/*justify-content: center*/
+			align-items: center;
+			color: #fc8d59;
+			position: relative;
+			line-height: 25px;
+		}
+		.top-text1{
+			font-size: 18px;
+		}
+		.top-text2{
+			font-size: 12px;
+		}
+		.toolbar-section-ul{
+			display: flex;
+			margin: 0;
+			padding: 0;
+			margin-left: 6px;
+		}
+		.toolbar-btn{
+			/*background: #fc8d59;*/
+			height: 50px;
+			width: 80px;
+			text-align: center;
+			line-height: 50px;
+			color: #878787;
+			font-size: 15px;
+		}
+		.on{
+			background: #fc8d59;
+			color: #fff;
+		}
+		.login-btn{ /*登录按钮区域*/
+			display: flex;
+		}
+		.orange-btn-small{
+			width: 50px;
+			height: 30px;
+			font-size: 12px;
+			background: #fc8d59;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 30px;
+			margin: 0px 3px;
+			color: #fff;
+		}
+		.center{ /*中部内容区域*/
+			width: 70%;
+			margin: 10px auto;
+			display: flex;
+			flex-direction: column;
+		}
+		.center-btn{
+			width: 80%;
+			margin: 10px auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-around;
+		}
+		.center-btn-left{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #8c8c8c;
+		}
+		.center-btn-right{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #8c8c8c;
+		}
+		.publish-btn{
+			display: flex;
+			margin: 10px 0;
+		}
+		.topic-list-content{ /*单条信息内容*/
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.topic-item{
+			width: 94%;
+			border-bottom: 1px solid #d7d7d7;
+			/*border-radius: 5px;*/
+			padding: 6px;
+			margin: 3px auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		.topic-up{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.topic-title{
+			display: flex;
+			align-items: center;
+		}
+		.topic-time{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			color: #928787;
+			font-size: 15px;
+		}
+		.topic-center{
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.topic-item-detail{
+			/*width: 60%;*/
+			height: 100px;
+			white-space: normal;
+			margin: 6px 5px;
+			flex:1;
+			justify-content: flex-end;
+			color: #928787;
+			font-size: 15px;
+		}
+
+		.foot{ /*底部内容*/
+			width: 100%;
+			height: 200px;
+			background: #fc8d59;
+			display: flex;
+		}
+		.footbox{
+			display: flex;
+			align-items: center;
+			width: 80%;
+			justify-content: space-around;
+			margin: auto;
+		}
+		.checkbox-new{ /*选择框样式*/
+			display: flex;
+			align-items: center;
+			margin-left: 6px;
+			background: url(images/check.png) no-repeat;
+			position: relative;
+			padding-left: 24px;
+		}
+		.checked{
+			background: url(images/checked.png) no-repeat;
+		}
+		.foot-contact{/*选择框选中样式*/
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.line2{
+			height: 120px;
+			width: 1px;
+			background: #fff;
+		}
+		.small-img{
+			width: 22px;
+			padding: 0 6px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="body-long">
+		<div class="top">
+			<div class="topbox">
+				<div class="toolbar">
+					<div class="toolbar-logo">
+						<img class="toolbar-logo-img" src="images/icon.png" alt="cat">
+						<div class="toolbar-logo-text">
+							<div class="top-text1">公益猫</div>
+							<div class="top-text2">每一只猫猫都值得被爱，为ta寻找港湾</div>
+						</div>
+					
+					<div class="toolbar-section">
+						<div class="toolbar-section-ul">
+							<a class="toolbar-btn" href="homepage.html">首页</a>
+							<a class="toolbar-btn" href="topiclist.html">社区</a>
+							<a class="toolbar-btn on" href="javascript:;">日记</a>
+							<a class="toolbar-btn" href="#">发布</a>
+							<a class="toolbar-btn" href="mydetail.html">我的</a>
+						</div>
+					</div>
+				</div>
+				<div class="login-btn">
+					<a href="login.html" class="orange-btn-small">登录</a>
+					<a class="orange-btn-small" href="join.html">注册</a>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="center">
+			<div class="center-btn">
+				<a href="#" class="center-btn-left">
+					为喵星人寻找主人
+					<!-- <img src="images/arrow-down.png" alt="select" style="width: 20px;margin: 0 auto;"> -->
+				</a>
+				<a href="#" class="center-btn-right">
+					我和喵星人的故事
+					<img src="images/arrow-down.png" alt="select" style="width: 20px;margin: 0 auto;">
+				</a>
+			</div>
+			<div class="publish-btn">
+				<a href="#" class="orange-white-btn" style="width: 60px;margin: auto;text-align: center;">发布</a>
+			</div>
+			<div class="topic-list-content" id="topic-list-content">
+				<div class="topic-item">
+					<div class="topic-up">
+						<div class="topic-title">
+								<img src="images/paw.png" alt="">
+								<span>标题：</span>
+								<div class="topic-item-title">我和猫猫的故事</div>
+						</div>
+						<div class="topic-time" id="send-time">2010-01-01 12:30</div>
+					</div>
+					<div class="topic-center">
+						<div class="topic-center-left">
+							<div class="topic-item-detail">喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵喵</div>
+							<!-- <div class="topic-open">查看全文></div> -->
+							<div class="cat-img-list">
+								<img src="" alt="">
+							</div>
+						</div>
+
+						</div>
+				</div>
+		</div>
+	</div>
+		<div class="foot">
+			<script type="text/javascript" src="js/foot.js"></script><!-- 通用底部 -->
+		</div>
+</body>
+</html>

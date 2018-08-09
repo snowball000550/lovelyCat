@@ -6,7 +6,8 @@
 						document.writeln("</div>");
 						document.writeln("<div class='select-age'>");
 							document.writeln("<b>年龄段</b>");
-							document.writeln("<input type='text'>");
+							document.writeln("<input type='text' value=0 id='select-age-num'>");
+							document.writeln("<a href='javascript:;' class='select-age-add' id='select-age-add'>+</a>");
 						document.writeln("</div>");
 					document.writeln("</div>");
 					document.writeln("<a href='#' class='select-reset-btn'>重置</a>");

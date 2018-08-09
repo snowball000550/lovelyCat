@@ -1,10 +1,10 @@
-<!-- topiclist.html -->
+<!-- diarylist.html -->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>社区</title>
+	<title>日记列表</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/reset.css">
 	<style type="text/css">
 		input{ /*输入框*/
 				border: 1px solid #91bfdb;
@@ -22,7 +22,7 @@
         }
 		.top{ /*顶边栏*/
 			width: 100%;
-			height: 360px;
+			height: 50px;
 			/*background: #fcd8d8;*/
 		}
 		.topbox{/*顶边内容*/
@@ -90,82 +90,34 @@
 			margin: 0px 3px;
 			color: #fff;
 		}
-		.logobox-right{
-			position: absolute;
-			right: 10%;
-		}
 		.center{ /*中部内容区域*/
+			width: 70%;
+			margin: 10px auto;
+			display: flex;
+			flex-direction: column;
+		}
+		.center-btn{
 			width: 80%;
 			margin: 10px auto;
 			display: flex;
-			
+			align-items: flex-start;
+			justify-content: space-around;
+		}
+		.center-btn-left{
+			display: flex;
 			flex-direction: column;
-		}
-		.center-title{ /*中部标题*/
-			width: 100%;
-			margin: 0 auto;
-			margin-bottom:10px;
-			padding-bottom: 16px;
-			display: flex;
-			align-items: center;
 			justify-content: center;
-			border-bottom: 1px solid #fc8d59;
+			color: #8c8c8c;
 		}
-		.select{ /*筛选栏*/
-			margin-left: 10px;
-		}
-		.select-up{
+		.center-btn-right{
 			display: flex;
-			justify-content: space-between;
-			margin: 4px 0;
-			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			color: #8c8c8c;
 		}
-		.select-down{
+		.publish-btn{
 			display: flex;
-			justify-content: space-between;
-			margin: 5px 0;
-			align-items: center;
-		}
-		.select-left{
-			display: flex;
-			align-items: center;
-		}
-		.select-reset-btn{
-			width: 50px;
-			height: 30px;
-			/*justify-content: space-between;*/
-			border-radius: 5px;
-			border: 1px solid #fc8d59;
-			line-height: 30px;
-			text-align: center;
-			color:#fc8d59;
-			font-size: 14px;
-			position: relative;
-			right: 30px;
-		}
-		.select-search-btn{
-			width: 50px;
-			height: 30px;
-			/*justify-content: space-between;*/
-			border-radius: 5px;
-			border: 1px solid #fc8d59;
-			line-height: 30px;
-			text-align: center;
-			color:#fc8d59;
-			font-size: 14px;
-			position: relative;
-			right: 30px;
-		}
-		.select-age{
-			margin-left: 130px;
-		}
-		.select-sex{
-
-			display: flex;
-		}
-		.select-health{
-			margin-left: 36px;
-			display: flex;
+			margin: 10px 0;
 		}
 		.topic-list-content{ /*单条信息内容*/
 			display: flex;
@@ -174,8 +126,8 @@
 		}
 		.topic-item{
 			width: 94%;
-			border: 1px solid #d7d7d7;
-			border-radius: 5px;
+			border-bottom: 1px solid #d7d7d7;
+			/*border-radius: 5px;*/
 			padding: 6px;
 			margin: 3px auto;
 			display: flex;
@@ -225,17 +177,6 @@
 		}
 		.right-img{
 			width: 200px;
-		}
-		.topic-down{
-			align-self: flex-end;
-			display: flex;
-		}
-		.btn-icon{
-			display: flex;
-			align-items: center;
-			margin: 2px 20px;
-			color: #928787;
-			font-size: 15px;
 		}
 		.center-wait{ /*中部等待文字*/
 			margin: 16px auto;
@@ -299,8 +240,8 @@
 					<div class="toolbar-section">
 						<div class="toolbar-section-ul">
 							<a class="toolbar-btn" href="homepage.html">首页</a>
-							<a class="toolbar-btn on" href="javascript:;">社区</a>
-							<a class="toolbar-btn" href="#">日记</a>
+							<a class="toolbar-btn" href="topiclist.html">社区</a>
+							<a class="toolbar-btn on" href="javascript:;">日记</a>
 							<a class="toolbar-btn" href="#">发布</a>
 							<a class="toolbar-btn" href="mydetail.html">我的</a>
 						</div>
@@ -311,17 +252,22 @@
 					<a class="orange-btn-small" href="join.html">注册</a>
 				</div>
 			</div>
-				<div class="logobox">
-					<div class="logobox-left"></div>
-					<div class="logobox-right">
-						<img src="images/cats.png" alt="">
-					</div>
-				</div>
-			</div>
 		</div>
+	</div>
 		<div class="center">
-			<div class="center-title"></div>
-			<div class="select"><script type="text/javascript" src="js/select.js"></script><!-- 通用选择栏 --></div>
+			<div class="center-btn">
+				<a href="#" class="center-btn-left">
+					为喵星人寻找主人
+					<!-- <img src="images/arrow-down.png" alt="select" style="width: 20px;margin: 0 auto;"> -->
+				</a>
+				<a href="#" class="center-btn-right">
+					我和喵星人的故事
+					<img src="images/arrow-down.png" alt="select" style="width: 20px;margin: 0 auto;">
+				</a>
+			</div>
+			<div class="publish-btn">
+				<a href="#" class="orange-white-btn" style="width: 60px;margin: auto;text-align: center;">发布</a>
+			</div>
 			<div class="topic-list-content" id="topic-list-content">
 				<div class="topic-item">
 					<div class="topic-up">
@@ -341,20 +287,6 @@
 									<img class="right-img" src="images/391773256.jpg" alt="">
 							</div>
 						</div>
-					<div class="topic-down">
-						<div class="btn-icon">
-							<img src="images/shoucang.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/comment.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/like-empty.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-					</div>
 				</div>
 				<div class="topic-item">
 					<div class="topic-up">
@@ -374,20 +306,6 @@
 									<img class="right-img" src="images/391773256.jpg" alt="">
 							</div>
 						</div>
-					<div class="topic-down">
-						<div class="btn-icon">
-							<img src="images/shoucang.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/comment.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/like-empty.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-					</div>
 				</div>
 				<div class="topic-item">
 					<div class="topic-up">
@@ -407,20 +325,6 @@
 									<img class="right-img" src="images/391773256.jpg" alt="">
 							</div>
 						</div>
-					<div class="topic-down">
-						<div class="btn-icon">
-							<img src="images/shoucang.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/comment.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-						<div class="btn-icon">
-							<img src="images/like-empty.png" alt="">
-							<span class="number" id="like-num">999</span>
-						</div>
-					</div>
 				</div>
 			<div class="center-wait">
 				<span>waiting...</span>
@@ -435,7 +339,7 @@
 <script type="text/javascript">
 	var toolbtn=document.getElementsByClassName("toolbar-btn");
 	for(i=0;i<toolbtn.length;i++){
-		if(i==1){continue;}else{
+		if(i==2){continue;}else{
 		toolbtn[i].onmouseover=function(){
 			this.classList.add("on");
 		}
@@ -444,25 +348,6 @@
 		}
 	}
 	}
+// 
 	
-
-	var checkboxNew=document.getElementsByClassName("checkbox-new");
-	var checkflag = true;
-	for(i=0;i<checkboxNew.length;i++){
-	  	checkboxNew[i].onclick=function(){
-	  		if(checkflag){
-	  			this.classList.add('checked');
-	  		}else{
-	  			this.classList.remove('checked');
-	  		}
-	  		checkflag=!checkflag;
-	  		
-	  	}
-	  }
-
-	var selectAgeAdd=document.getElementById("select-age-add");
-	var selectAgeNum=document.getElementById("select-age-num");
-	selectAgeAdd.onclick=function(){
-		selectAgeNum.value=parseInt(selectAgeNum.value)+1;
-		}
 </script>

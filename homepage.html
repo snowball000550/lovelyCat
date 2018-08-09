@@ -101,10 +101,6 @@
 		.cornimg{
 			width: 100px;
 		}
-/*		.blueimg{
-			margin-top: 40px;
-			margin-left: 60px;
-		}*/
 		.blueimg1{
 			position: absolute;
 		}
@@ -115,6 +111,8 @@
 		}
 		.write-topic{
 			display: flex;
+			margin-top: 40px;
+			margin-left: -100px;
 		}
 		.blueimg2{
 			/*margin: 20px auto;*/
@@ -124,14 +122,16 @@
 		}
 		.blue-text2{
 			margin: 20px auto;
-			padding-top: 90px;
+			padding-top: 36px;
 			width: 415px;
 			height: 122px;
+			background: url(images/homeblue1.png) no-repeat;
 		}
 		.logo-cat{
 			position: absolute;
-			right: 10%;
+			right: 30%;
 			top: 37%;
+			width: 120px;
 		}
 		.center{
 			width: 80%;
@@ -203,6 +203,10 @@
 		}
 		.select-age{
 			margin-left: 130px;
+		}
+		.select-age-add{
+			margin-left: -20px;
+			color: #91bfdb;
 		}
 		.select-sex{
 
@@ -327,7 +331,7 @@
 						</div>
 					</div>
 					<div class="write-topic">
-						<img src="images/homeblue1.png" class="blueimg2">
+						<!-- <img src="images/homeblue1.png" class="blueimg2"> -->
 						<div class="blue-text2 HYLeMiaoTiW-font">发布喵星人</div>
 					</div>
 					<div class="logo-cat">
@@ -343,7 +347,7 @@
 				<div class="line"></div>
 			</div>
 			<div class="select">
-				<script type="text/javascript" src="select.js"></script><!-- 通用选择栏 -->
+				<script type="text/javascript" src="js/select.js"></script><!-- 通用选择栏 -->
 			</div>
 			<div class="cat-content">
 				<ul class="cat-content-ul" id="cat-content-ul">
@@ -352,7 +356,7 @@
 			</div>
 		</div>
 		<div class="foot">
-		<script type="text/javascript" src="foot.js"></script><!-- 通用底部 -->
+		<script type="text/javascript" src="js/foot.js"></script><!-- 通用底部 -->
 		</div>
 	</div>
 
@@ -438,15 +442,12 @@
 	  		}else{
 	  			this.classList.remove('checked');
 	  		}
-	  		checkflag=!checkflag;
-	  		
+	  		checkflag=!checkflag;		
 	  	}
-	// 		if(firstChild[i].getAttribute('src',2)=='images/check.png'){
-	// 			firstChild.src='images/checked.png';
-	// 		}else{
-	// 			firstChild.src='images/check.png';
-	// 		}
-	// }
-
 }
+	var selectAgeAdd=document.getElementById("select-age-add");
+	var selectAgeNum=document.getElementById("select-age-num");
+	selectAgeAdd.onclick=function(){
+		selectAgeNum.value=parseInt(selectAgeNum.value)+1;
+		}
 </script>
